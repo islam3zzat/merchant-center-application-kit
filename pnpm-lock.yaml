@@ -16,6 +16,9 @@ patchedDependencies:
   babel-plugin-typescript-to-proptypes@1.4.2:
     hash: lqszx5kvqxa52t7l2zddujkdkq
     path: patches/babel-plugin-typescript-to-proptypes@1.4.2.patch
+  vite-bundle-analyzer@0.15.2:
+    hash: i77bs7angtrizseperdq6hjlca
+    path: patches/vite-bundle-analyzer@0.15.2.patch
 
 importers:
 
@@ -2735,7 +2738,7 @@ importers:
         version: 6.0.3(@types/node@22.10.1)
       vite-bundle-analyzer:
         specifier: 0.15.2
-        version: 0.15.2
+        version: 0.15.2(patch_hash=i77bs7angtrizseperdq6hjlca)
       webpack:
         specifier: 5.94.0
         version: 5.94.0
@@ -5829,7 +5832,7 @@ packages:
     dependencies:
       '@babel/core': 7.23.0
       '@babel/helper-create-class-features-plugin': 7.22.15(@babel/core@7.23.0)
-      '@babel/helper-plugin-utils': 7.24.8
+      '@babel/helper-plugin-utils': 7.22.5
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -5842,7 +5845,7 @@ packages:
     dependencies:
       '@babel/core': 7.24.0
       '@babel/helper-create-class-features-plugin': 7.22.15(@babel/core@7.24.0)
-      '@babel/helper-plugin-utils': 7.24.8
+      '@babel/helper-plugin-utils': 7.22.5
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -6007,7 +6010,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.23.0
-      '@babel/helper-plugin-utils': 7.24.8
+      '@babel/helper-plugin-utils': 7.22.5
     dev: false
 
   /@babel/plugin-transform-destructuring@7.24.8(@babel/core@7.25.2):
@@ -6179,7 +6182,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.23.0
-      '@babel/helper-plugin-utils': 7.24.8
+      '@babel/helper-plugin-utils': 7.22.5
       '@babel/plugin-syntax-export-namespace-from': 7.8.3(@babel/core@7.23.0)
     dev: false
 
@@ -6365,7 +6368,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.23.0
-      '@babel/helper-plugin-utils': 7.24.8
+      '@babel/helper-plugin-utils': 7.22.5
       '@babel/plugin-syntax-logical-assignment-operators': 7.10.4(@babel/core@7.23.0)
     dev: false
 
@@ -6953,7 +6956,7 @@ packages:
     dependencies:
       '@babel/core': 7.23.0
       '@babel/helper-create-class-features-plugin': 7.22.15(@babel/core@7.23.0)
-      '@babel/helper-plugin-utils': 7.24.8
+      '@babel/helper-plugin-utils': 7.22.5
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -6966,7 +6969,7 @@ packages:
     dependencies:
       '@babel/core': 7.24.0
       '@babel/helper-create-class-features-plugin': 7.22.15(@babel/core@7.24.0)
-      '@babel/helper-plugin-utils': 7.24.8
+      '@babel/helper-plugin-utils': 7.22.5
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -7008,7 +7011,7 @@ packages:
       '@babel/core': 7.23.0
       '@babel/helper-annotate-as-pure': 7.22.5
       '@babel/helper-create-class-features-plugin': 7.22.15(@babel/core@7.23.0)
-      '@babel/helper-plugin-utils': 7.24.8
+      '@babel/helper-plugin-utils': 7.22.5
       '@babel/plugin-syntax-private-property-in-object': 7.14.5(@babel/core@7.23.0)
     transitivePeerDependencies:
       - supports-color
@@ -7249,7 +7252,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.23.0
-      '@babel/helper-plugin-utils': 7.24.8
+      '@babel/helper-plugin-utils': 7.22.5
       regenerator-transform: 0.15.2
     dev: false
 
@@ -8065,8 +8068,8 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.23.0
-      '@babel/helper-plugin-utils': 7.24.8
-      '@babel/helper-validator-option': 7.24.8
+      '@babel/helper-plugin-utils': 7.22.5
+      '@babel/helper-validator-option': 7.22.15
       '@babel/plugin-syntax-jsx': 7.22.5(@babel/core@7.23.0)
       '@babel/plugin-transform-modules-commonjs': 7.22.15(@babel/core@7.23.0)
       '@babel/plugin-transform-typescript': 7.22.15(@babel/core@7.23.0)
@@ -23425,7 +23428,7 @@ packages:
       lodash: 4.17.21
       pretty-error: 4.0.0
       tapable: 2.2.1
-      webpack: 5.94.0
+      webpack: 5.94.0(uglify-js@3.18.0)
 
   /htmlparser2@6.1.0:
     resolution: {integrity: sha512-gyyPk6rgonLFEDGoeRgQNaEUvdJ4ktTmmUh/h2t7s+M8oPpIPxgNACWa+6ESR57kXstwqPiCut0V8NRpcwgU7A==}
@@ -30556,7 +30559,6 @@ packages:
       terser: 5.29.2
       uglify-js: 3.18.0
       webpack: 5.94.0(uglify-js@3.18.0)
-    dev: true
 
   /terser-webpack-plugin@5.3.10(webpack@5.94.0):
     resolution: {integrity: sha512-BKFPWlPDndPs+NGGCr1U59t0XScL5317Y0UReNrHaw9/FwhPENlq6bfgs+4yPfyP51vqC1bQ4rp1EfXW5ZSH9w==}
@@ -31760,10 +31762,11 @@ packages:
       vfile-message: 3.1.4
     dev: false
 
-  /vite-bundle-analyzer@0.15.2:
+  /vite-bundle-analyzer@0.15.2(patch_hash=i77bs7angtrizseperdq6hjlca):
     resolution: {integrity: sha512-AwFOewhvf7EkTACa9c/inbxMrJOWwyVF4nUMITwN26lM5TAYkcnJC4KFgZXym3sYRAWe1Qgvk8X4OFTw4HPaJw==}
     hasBin: true
     dev: false
+    patched: true
 
   /vite@6.0.3(@types/node@22.10.1):
     resolution: {integrity: sha512-Cmuo5P0ENTN6HxLSo6IHsjCLn/81Vgrp81oaiFFMRa8gGDj5xEjIcEpf2ZymZtZR8oU0P2JX5WuUp/rlXcHkAw==}
@@ -32084,7 +32087,6 @@ packages:
       - '@swc/core'
       - esbuild
       - uglify-js
-    dev: true
 
   /webpackbar@5.0.2(webpack@5.94.0):
     resolution: {integrity: sha512-BmFJo7veBDgQzfWXl/wwYXr/VFus0614qZ8i9znqcl9fnEdiVkdbi0TedLQ6xAK92HZHDJ0QmyQ0fmuZPAgCYQ==}
